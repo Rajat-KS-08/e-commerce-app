@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+//Importing Components
+import Header from "./components/layout/Header";
+import Home from "./components/Home";
+import Cart from "./components/Cart";
+import Login from "./components/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { auth } from "./firebaseConfig/firebase";
+import { useStateValue } from "./ContextAPI/StateProvider";
+import classes from "./App.css";
 
-function App() {
+const App = () => {
+
+  const [{}, dispatch] = useStateValue();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      console.log("User : ", authUser);
+      if (authUser) {
+        dispatch({
+          type : 'SET_USER',
+          user : authUser
+        });
+      } else {
+        dispatch({
+          type : 'SET_USER',
+          user : null
+        });
+      }
+
+    })
+  }, [dispatch]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className={classes.app}>
+        <Header />
+        <Routes>
+          <Route exact path="/" Component={Home} />
+        </Routes>
+        <Routes>
+          <Route exact path="/cart" Component={Cart} />
+        </Routes>
+        <Routes>
+          <Route path="/login" Component={Login} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,142 @@
+
+
+.login {
+  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  height: 70vh;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  border-radius: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.avatar {
+  background-color: #25d366;
+  color : #120E43;
+  margin-top: 5%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login_container {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid rgb(220, 10, 10);
+  padding: 20px;
+  margin-top: 7%;
+}
+
+.login_container h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1DA1F2;
+}
+
+.login_container > form > h5 {
+  margin-bottom: 5px;
+  color: #25D366;
+}
+
+.login_container > form > input {
+  height: 30px;
+  margin-bottom: 10px;
+  width: 98%;
+  background-color: #FFDC80;
+}
+
+/* CSS */
+.signin {
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-bottom: 7px;
+}
+
+.signin:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.signin:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.register {
+  align-items: center;
+  background-color: #F4BE2C;
+  background-position: 0 0;
+  border: 1px solid #fee0e0;
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #d33a2c;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 33.4929px;
+  list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg)
+    none;
+  padding: 2px 12px;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-underline-offset: 1px;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.register:active,
+.register:hover,
+.register:focus {
+  outline: 0;
+}
+
+.register:active {
+  background-color: #d33a2c;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #ffffff;
+}
+
+.register:hover {
+  background-color: #ffe3e3;
+  border-color: #faa4a4;
+}
+
+.register:active:hover,
+.register:focus:hover,
+.register:focus {
+  background-color: #d33a2c;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #ffffff;
+}
